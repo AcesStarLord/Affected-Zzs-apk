@@ -1,0 +1,6 @@
+{
+  "appId": "com.affectedzzs.biometrics",
+  "appName": "Affected Zzs",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Affected Zzs - Substance & Sleep Biometrics",
+  "description": "Precision tracking for caffeine, alcohol, and tobacco intake with barcode scanning, pharmacokinetic clearance modeling, wearable sleep sync, and AES-256 encrypted backups.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
