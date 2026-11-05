@@ -2391,9 +2391,27 @@ export default function App() {
           <div className="flex items-center gap-2">
             <ShieldCheck className="h-4 w-4 text-teal-600" />
             <span>Affected Zzs - Substance &amp; Sleep Biometrics</span>
+            <span aria-hidden="true">·</span>
+            <a
+              href="https://github.com/AcesStarLord/Affected-Zzs-apk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-slate-600 hover:text-teal-600 dark:text-slate-400"
+            >
+              AcesStarLord/Affected-Zzs-apk
+            </a>
           </div>
-          <div className="flex items-center gap-4">
-            <span>Apple HealthKit & Google Fit Compatible</span>
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="https://github.com/AcesStarLord/Affected-Zzs-apk/releases/latest/download/app-debug.apk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline dark:text-teal-400"
+            >
+              Download Android Debug APK (app-debug.apk)
+            </a>
+            <span aria-hidden="true">·</span>
+            <span>Apple HealthKit &amp; Google Fit Compatible</span>
             <span aria-hidden="true">·</span>
             <span>Client-Side AES-GCM-256 Vault</span>
           </div>

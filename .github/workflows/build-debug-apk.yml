@@ -10,9 +10,12 @@ on:
 permissions:
   contents: write
 
+env:
+  GITHUB_REPO_IDENTITY: AcesStarLord/Affected-Zzs-apk
+
 jobs:
   build-apk:
-    name: Build Android Debug APK
+    name: Build Android Debug APK (AcesStarLord/Affected-Zzs-apk)
     runs-on: ubuntu-latest
 
     steps:
@@ -71,11 +74,15 @@ jobs:
       - name: Publish Debug APK to GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
+          repository: AcesStarLord/Affected-Zzs-apk
           tag_name: latest
-          name: Latest Debug APK Build
+          name: Latest Debug APK Build (AcesStarLord/Affected-Zzs-apk)
           body: |
-            Automated Android Debug APK build for **Affected Zzs - Substance & Sleep Biometrics**.
-            Download `app-debug.apk` or `Affected-Zzs-debug.apk` below to install directly on your Android device.
+            Automated Android Debug APK build for **Affected Zzs - Substance & Sleep Biometrics** (`AcesStarLord/Affected-Zzs-apk`).
+
+            ### Direct APK Download Links
+            - **Direct APK (`app-debug.apk`):** https://github.com/AcesStarLord/Affected-Zzs-apk/releases/latest/download/app-debug.apk
+            - **Direct APK (`Affected-Zzs-debug.apk`):** https://github.com/AcesStarLord/Affected-Zzs-apk/releases/latest/download/Affected-Zzs-debug.apk
           files: |
             ./app-debug.apk
             ./Affected-Zzs-debug.apk
@@ -83,3 +90,10 @@ jobs:
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Write Direct APK Download Summary
+        run: |
+          echo "### Android Debug APK Ready for AcesStarLord/Affected-Zzs-apk" >> $GITHUB_STEP_SUMMARY
+          echo "- **Direct Download (app-debug.apk):** https://github.com/AcesStarLord/Affected-Zzs-apk/releases/latest/download/app-debug.apk" >> $GITHUB_STEP_SUMMARY
+          echo "- **Direct Download (Affected-Zzs-debug.apk):** https://github.com/AcesStarLord/Affected-Zzs-apk/releases/latest/download/Affected-Zzs-debug.apk" >> $GITHUB_STEP_SUMMARY
+          echo "- **Releases Page:** https://github.com/AcesStarLord/Affected-Zzs-apk/releases" >> $GITHUB_STEP_SUMMARY
